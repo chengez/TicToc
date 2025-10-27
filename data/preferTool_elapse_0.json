@@ -1,0 +1,5440 @@
+[
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Jane Smith?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g7h8",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g7h8",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 78, \"oxygen_level\": 97, \"respiratory_rate\": 18, \"monitor_slots_left\": 1}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **78 bpm**\n- Oxygen level: **97%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 monitoring slot available** for this patient.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a cardiac monitor for Jane Smith.",
+        "time": "2023-10-01T08:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_i9j0",
+            "function": {
+              "name": "add_monitor",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_i9j0",
+        "name": "add_monitor",
+        "content": "{\"status\": \"success\", \"message\": \"A cardiac monitor has been added for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A cardiac monitor has been successfully added for patient Jane Smith.",
+        "time": "2023-10-01T08:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add a monitor for Jane Smith?",
+        "time": [
+          "2023-10-01T08:00:44Z",
+          "2023-10-01T08:03:54Z",
+          "2023-10-01T10:59:54Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_monitor",
+          "description": "Add a monitor for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-10T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Jane Smith?",
+        "time": "2023-10-10T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g7h8",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-10T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g7h8",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 98, \"respiratory_rate\": 18, \"ventilator_slots_left\": 1}]",
+        "time": "2023-10-10T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **98%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 ventilator slot available** for this patient.",
+        "time": "2023-10-10T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a ventilator to Jane Smith's equipment.",
+        "time": "2023-10-10T08:01:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_i9j0",
+            "function": {
+              "name": "add_ventilator",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-10T08:01:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_i9j0",
+        "name": "add_ventilator",
+        "content": "{\"status\": \"success\", \"message\": \"A ventilator has been added for patient Jane Smith.\"}",
+        "time": "2023-10-10T08:01:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A ventilator has been successfully added for patient Jane Smith.",
+        "time": "2023-10-10T08:01:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add a ventilator for Jane Smith?",
+        "time": [
+          "2023-10-10T08:01:29Z",
+          "2023-10-10T08:03:15Z",
+          "2023-10-10T10:45:47Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_ventilator",
+          "description": "Add a ventilator for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-21T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the current oxygen supply status for patient Jane Smith?",
+        "time": "2023-10-21T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g7h8",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-21T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g7h8",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 92, \"respiratory_rate\": 18, \"oxygen_tanks_left\": 1}]",
+        "time": "2023-10-21T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **92%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 oxygen tank available** for this patient.",
+        "time": "2023-10-21T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add an oxygen tank to Jane Smith's equipment.",
+        "time": "2023-10-21T10:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_i9j0",
+            "function": {
+              "name": "add_oxygen_tank",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-21T10:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_i9j0",
+        "name": "add_oxygen_tank",
+        "content": "{\"status\": \"success\", \"message\": \"An oxygen tank has been added for patient Jane Smith.\"}",
+        "time": "2023-10-21T10:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An oxygen tank has been successfully added for patient Jane Smith.",
+        "time": "2023-10-21T10:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a oxygen tank for Jane Smith.",
+        "time": "2023-10-21T10:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_k1l2",
+            "function": {
+              "name": "add_oxygen_tank",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-21T10:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_k1l2",
+        "name": "add_oxygen_tank",
+        "content": "{\"status\": \"failure\", \"message\": \"No oxygen tanks are available to be added.\"}",
+        "time": "2023-10-21T10:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Unfortunately, no additional oxygen tanks are available for patient Jane Smith at this time.",
+        "time": "2023-10-21T10:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Is there any available oxygen tanks for Jane Smith?",
+        "time": [
+          "2023-10-21T10:02:14Z",
+          "2023-10-21T10:05:11Z",
+          "2023-10-21T12:28:26Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_oxygen_tank",
+          "description": "Add an oxygen tank for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide me the current oxygen level for patient Jane Smith?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_f1g2",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_f1g2",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 93, \"respiratory_rate\": 18, \"ventilator_slots_left\": 1}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **93%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 ventilator slot available** for this patient.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a ventilator for Jane Smith.",
+        "time": "2023-10-01T08:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_h3i4",
+            "function": {
+              "name": "add_ventilator",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_h3i4",
+        "name": "add_ventilator",
+        "content": "{\"status\": \"success\", \"message\": \"A ventilator has been added for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A ventilator has been successfully added for patient Jane Smith.",
+        "time": "2023-10-01T08:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you please add a ventilator for Jane Smith?",
+        "time": [
+          "2023-10-01T08:02:45Z",
+          "2023-10-01T08:05:56Z",
+          "2023-10-01T12:19:20Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_ventilator",
+          "description": "Add a ventilator for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-03-10T14:01:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the available dialysis machines for patient Jane Doe?",
+        "time": "2023-03-10T14:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_f7g8",
+            "function": {
+              "name": "get_dialysis_availability",
+              "arguments": "{\"patient_name\": \"Jane Doe\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T14:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_f7g8",
+        "name": "get_dialysis_availability",
+        "content": "{\"patient_name\": \"Jane Doe\", \"dialysis_machines_available\": 3}",
+        "time": "2023-03-10T14:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "There are **3 dialysis machines available** for patient Jane Doe.",
+        "time": "2023-03-10T14:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please reserve a dialysis machine for Jane Doe.",
+        "time": "2023-03-10T14:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_h6i1",
+            "function": {
+              "name": "reserve_dialysis_machine",
+              "arguments": "{\"patient_name\": \"Jane Doe\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T14:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_h6i1",
+        "name": "reserve_dialysis_machine",
+        "content": "{\"status\": \"success\", \"message\": \"A dialysis machine has been reserved for patient Jane Doe.\"}",
+        "time": "2023-03-10T14:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A dialysis machine has been successfully reserved for patient Jane Doe.",
+        "time": "2023-03-10T14:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you reserve a dialysis machine for Jane Smith?",
+        "time": "2023-03-10T14:04:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_v8b6",
+            "function": {
+              "name": "reserve_dialysis_machine",
+              "arguments": "{\"patient_name\": \"Jane Doe\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T14:04:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_v8b6",
+        "name": "reserve_dialysis_machine",
+        "content": "{\"status\": \"success\", \"message\": \"Another dialysis machine has been reserved for patient Jane Doe.\"}",
+        "time": "2023-03-10T14:04:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Another dialysis machine has been successfully reserved for patient Jane Doe.",
+        "time": "2023-03-10T14:04:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Reserve one dialysis machine for Jane Doe.",
+        "time": [
+          "2023-03-10T14:04:14Z",
+          "2023-03-10T14:06:45Z",
+          "2023-03-10T17:04:00Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_dialysis_availability",
+          "description": "Check the number of available dialysis machines for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "reserve_dialysis_machine",
+          "description": "Reserve a dialysis machine for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you display the current vitals for patient Jane Doe?",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_f1g2",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Doe\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_f1g2",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Doe\", \"heart_rate\": 78, \"oxygen_level\": 97, \"respiratory_rate\": 18, \"ventilator_slots_left\": 1}]",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Doe:\n\n- Heart rate: **78 bpm**\n- Oxygen level: **97%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 ventilator slot available** for this patient.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a ventilator to Jane Doe's equipment.",
+        "time": "2023-10-01T09:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_h3i4",
+            "function": {
+              "name": "add_ventilator",
+              "arguments": "{\"patient_name\": \"Jane Doe\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_h3i4",
+        "name": "add_ventilator",
+        "content": "{\"status\": \"success\", \"message\": \"A ventilator has been added for patient Jane Doe.\"}",
+        "time": "2023-10-01T09:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A ventilator has been successfully added for patient Jane Doe.",
+        "time": "2023-10-01T09:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a ventilator for her.",
+        "time": [
+          "2023-10-01T09:01:45Z",
+          "2023-10-01T09:06:04Z",
+          "2023-10-01T11:18:10Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_ventilator",
+          "description": "Add a ventilator for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-05T14:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the vitals for patient Jane Smith?",
+        "time": "2023-10-05T14:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g7h8",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T14:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g7h8",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 97, \"respiratory_rate\": 18, \"ventilator_slots_left\": 1}]",
+        "time": "2023-10-05T14:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **97%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 ventilator slot available** for this patient.",
+        "time": "2023-10-05T14:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a ventilator for Jane Smith.",
+        "time": "2023-10-05T14:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_v8b6",
+            "function": {
+              "name": "add_ventilator",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T14:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_v8b6",
+        "name": "add_ventilator",
+        "content": "{\"status\": \"success\", \"message\": \"A ventilator has been added for patient Jane Smith.\"}",
+        "time": "2023-10-05T14:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A ventilator has been successfully added for patient Jane Smith.",
+        "time": "2023-10-05T14:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "I'd like to add a ventilator for Jane Smith.",
+        "time": [
+          "2023-10-05T14:02:13Z",
+          "2023-10-05T14:06:18Z",
+          "2023-10-05T17:29:54Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_ventilator",
+          "description": "Add a ventilator for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-03T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you tell me the current vitals and equipment for patient Jane Smith?",
+        "time": "2023-10-03T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g1h2",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-03T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g1h2",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 93, \"respiratory_rate\": 18, \"infusion_pump_slots_left\": 1}]",
+        "time": "2023-10-03T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the current vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **93%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 infusion pump slot available** for this patient.",
+        "time": "2023-10-03T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please attach an infusion pump for Jane Smith.",
+        "time": "2023-10-03T10:02:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_i3j4",
+            "function": {
+              "name": "add_infusion_pump",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-03T10:02:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_i3j4",
+        "name": "add_infusion_pump",
+        "content": "{\"status\": \"success\", \"message\": \"An infusion pump has been attached to patient Jane Smith.\"}",
+        "time": "2023-10-03T10:02:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An infusion pump has been successfully attached to patient Jane Smith.",
+        "time": "2023-10-03T10:02:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Attach an infusion pump to Jane Smith.",
+        "time": [
+          "2023-10-03T10:02:30Z",
+          "2023-10-03T10:04:13Z",
+          "2023-10-03T14:14:59Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_infusion_pump",
+          "description": "Add an infusion pump for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals and equipment status for patient Jane Smith?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_g7h8",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_g7h8",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 98, \"respiratory_rate\": 18, \"monitor_slots_left\": 1}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **98%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 monitor slot available** for this patient.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a monitor for Jane Smith.",
+        "time": "2023-10-01T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_i9j0",
+            "function": {
+              "name": "add_monitor",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_i9j0",
+        "name": "add_monitor",
+        "content": "{\"status\": \"success\", \"message\": \"A monitor has been added for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A monitor has been successfully added for patient Jane Smith.",
+        "time": "2023-10-01T08:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a monitor for Jane Smith.",
+        "time": [
+          "2023-10-01T08:01:43Z",
+          "2023-10-01T08:03:54Z",
+          "2023-10-01T11:10:48Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_monitor",
+          "description": "Add a monitor for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_in_context_cnt_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are an advanced medical device assistant providing live ICU vitals for a patient and managing alarms and equipment in a room.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What are the current vitals for patient Jane Smith?",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_f1g7",
+            "function": {
+              "name": "get_patient_vitals",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_f1g7",
+        "name": "get_patient_vitals",
+        "content": "[{\"patient_name\": \"Jane Smith\", \"heart_rate\": 75, \"oxygen_level\": 97, \"respiratory_rate\": 18, \"monitor_slots_left\": 1}]",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for patient Jane Smith:\n\n- Heart rate: **75 bpm**\n- Oxygen level: **97%**\n- Respiratory rate: **18 breaths per minute**\n\nThere is **1 monitor slot available** for this patient.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please attach a cardiac monitor for Jane Smith.",
+        "time": "2023-10-01T09:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_h2j8",
+            "function": {
+              "name": "add_cardiac_monitor",
+              "arguments": "{\"patient_name\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_h2j8",
+        "name": "add_cardiac_monitor",
+        "content": "{\"status\": \"success\", \"message\": \"A cardiac monitor has been added for patient Jane Smith.\"}",
+        "time": "2023-10-01T09:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "A cardiac monitor has been successfully added for patient Jane Smith.",
+        "time": "2023-10-01T09:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Please attach a cardiac monitor for Jane Smith.",
+        "time": [
+          "2023-10-01T09:00:42Z",
+          "2023-10-01T09:03:29Z",
+          "2023-10-01T12:06:21Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_patient_vitals",
+          "description": "Get live ICU vitals for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "add_cardiac_monitor",
+          "description": "Add a cardiac monitor for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-10T10:45:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you add a heart rate monitor in Room 302 for patient Jane Smith?",
+        "time": "2023-10-10T10:45:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_d23f",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"302\", \"equipment\": \"heart rate monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-10T10:45:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_d23f",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Heart rate monitors are currently unavailable. Cannot add in Room 302 for patient Jane Smith.\"}",
+        "time": "2023-10-10T10:45:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, heart rate monitors are currently unavailable. I cannot add one in Room 302 for patient Jane Smith at this time.",
+        "time": "2023-10-10T10:45:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you check if there are any available ECG machines for Room 302 for Jane Smith?",
+        "time": "2023-10-10T10:47:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_npl9",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"302\", \"equipment\": \"ECG machine\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-10T10:47:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_npl9",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"ECG machine added in Room 302 for patient Jane Smith.\"}",
+        "time": "2023-10-10T10:47:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added an ECG machine in Room 302 for patient Jane Smith.",
+        "time": "2023-10-10T10:47:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a heart rate monitor in Room 302 for Jane Smith.",
+        "time": [
+          "2023-10-10T10:47:13Z",
+          "2023-10-10T10:49:27Z",
+          "2023-10-10T14:56:31Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states, and add equipment in a room.",
+        "time": "2023-07-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a defibrillator in Room 102 for patient Mary Smith.",
+        "time": "2023-07-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ef45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"102\", \"equipment\": \"defibrillator\", \"patient\": \"Mary Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-07-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ef45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Defibrillator unavailable. Unable to add in Room 102 for patient Mary Smith.\"}",
+        "time": "2023-07-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we do not have any defibrillators available at the moment. We cannot add one in Room 102 for patient Mary Smith.",
+        "time": "2023-07-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add a pulse oximeter in Room 102 for patient Mary Smith?",
+        "time": "2023-07-01T08:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_gh56",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"102\", \"equipment\": \"pulse oximeter\", \"patient\": \"Mary Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-07-01T08:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_gh56",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Pulse oximeter added in Room 102 for patient Mary Smith.\"}",
+        "time": "2023-07-01T08:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a pulse oximeter in Room 102 for patient Mary Smith.",
+        "time": "2023-07-01T08:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a defibrillator in Room 102 for patient Mary Smith.",
+        "time": [
+          "2023-07-01T08:01:15Z",
+          "2023-07-01T08:04:53Z",
+          "2023-07-01T10:53:39Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states, and add equipment in a room.",
+        "time": "2023-10-11T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add an infusion pump in Room 202 for patient Jane Smith?",
+        "time": "2023-10-11T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"202\", \"equipment\": \"infusion pump\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-11T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Infusion pump stock is currently unavailable. Cannot add in Room 202 for patient Jane Smith.\"}",
+        "time": "2023-10-11T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, but we currently have no available infusion pumps. We cannot add one in Room 202 for patient Jane Smith at this moment.",
+        "time": "2023-10-11T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "In that case, can you add a cardiac monitor in Room 202 for Jane Smith?",
+        "time": "2023-10-11T09:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_bc77",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"202\", \"equipment\": \"cardiac monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-11T09:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_bc77",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Cardiac monitor added in Room 202 for patient Jane Smith.\"}",
+        "time": "2023-10-11T09:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a cardiac monitor in Room 202 for patient Jane Smith.",
+        "time": "2023-10-11T09:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add an infusion pump to Room 202 for Jane Smith?",
+        "time": [
+          "2023-10-11T09:01:16Z",
+          "2023-10-11T09:02:32Z",
+          "2023-10-11T11:33:14Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-03-15T08:30:00Z"
+      },
+      {
+        "role": "user",
+        "content": "I need a defibrillator in Room 204 for patient Jane Smith.",
+        "time": "2023-03-15T08:30:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"204\", \"equipment\": \"defibrillator\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T08:30:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"No defibrillators available. Unable to add in Room 204 for patient Jane Smith.\"}",
+        "time": "2023-03-15T08:30:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, there are currently no defibrillators available. We can't add one in Room 204 for patient Jane Smith right now.",
+        "time": "2023-03-15T08:30:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can we add a heart rate monitor in Room 204 for Jane Smith instead?",
+        "time": "2023-03-15T08:31:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_cd67",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"204\", \"equipment\": \"heart rate monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T08:31:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_cd67",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Heart rate monitor added in Room 204 for patient Jane Smith.\"}",
+        "time": "2023-03-15T08:31:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The heart rate monitor has been successfully added in Room 204 for patient Jane Smith.",
+        "time": "2023-03-15T08:31:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a defibrillator in Room 204 for Jane Smith.",
+        "time": [
+          "2023-03-15T08:31:14Z",
+          "2023-03-15T08:32:54Z",
+          "2023-03-15T11:26:54Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "I need to add a dialysis machine in Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"dialysis machine\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"No available dialysis machines in stock. Cannot add to Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we currently have no dialysis machines available in stock and cannot add one to Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you then add a heart monitor in Room 402 for patient Jane Smith?",
+        "time": "2023-10-01T09:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_cd67",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"heart monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_cd67",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Heart monitor added in Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T09:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a heart monitor in Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T09:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a dialysis machine in Room 402 for patient Jane Smith.",
+        "time": [
+          "2023-10-01T09:01:15Z",
+          "2023-10-01T09:04:25Z",
+          "2023-10-01T12:50:38Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add an ECG machine to Room 402 for patient Jane Smith?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_xz34",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"ECG machine\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_xz34",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"ECG machine stock exhausted. Unable to add in Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we are currently out of ECG machines. We cannot add one in Room 402 for patient Jane Smith at this time.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "In that case, could you add an infusion pump in Room 402 for Jane Smith?",
+        "time": "2023-10-01T08:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab56",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"infusion pump\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab56",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Infusion pump added in Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added an infusion pump in Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T08:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add an ECG machine in Room 402 for patient Jane Smith.",
+        "time": [
+          "2023-10-01T08:01:14Z",
+          "2023-10-01T08:03:38Z",
+          "2023-10-01T11:08:22Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-01T08:15:30Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add an infusion pump in Room 402 for patient Alice Smith.",
+        "time": "2023-10-01T08:15:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab12",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"infusion pump\", \"patient\": \"Alice Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:15:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab12",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Infusion pump stock depleted. Unable to add in Room 402 for patient Alice Smith.\"}",
+        "time": "2023-10-01T08:15:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, but we do not have any infusion pumps available at the moment. We cannot add one in Room 402 for patient Alice Smith.",
+        "time": "2023-10-01T08:15:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you add a cardiac monitor in Room 402 for Alice Smith then?",
+        "time": "2023-10-01T08:17:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_cd34",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"cardiac monitor\", \"patient\": \"Alice Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:17:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_cd34",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Cardiac monitor added in Room 402 for patient Alice Smith.\"}",
+        "time": "2023-10-01T08:17:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a cardiac monitor in Room 402 for patient Alice Smith.",
+        "time": "2023-10-01T08:17:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add an infusion pump in Room 402 for Alice Smith.",
+        "time": [
+          "2023-10-01T08:17:13Z",
+          "2023-10-01T08:21:42Z",
+          "2023-10-01T10:16:44Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-05T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "I want to add an infusion pump in Room 502 for patient Jane Smith.",
+        "time": "2023-10-05T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_xd73",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"502\", \"equipment\": \"infusion pump\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_xd73",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Infusion pump stock is currently depleted. Unable to add in Room 502 for patient Jane Smith.\"}",
+        "time": "2023-10-05T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we are currently out of infusion pumps. We cannot add one in Room 502 for patient Jane Smith at the moment.",
+        "time": "2023-10-05T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you check if there's a portable heart monitor available for Room 502 for patient Jane Smith?",
+        "time": "2023-10-05T09:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_yl45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"502\", \"equipment\": \"portable heart monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T09:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_yl45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Portable heart monitor added in Room 502 for patient Jane Smith.\"}",
+        "time": "2023-10-05T09:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a portable heart monitor in Room 502 for patient Jane Smith.",
+        "time": "2023-10-05T09:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add an infusion pump in Room 502 for Jane Smith.",
+        "time": [
+          "2023-10-05T09:02:16Z",
+          "2023-10-05T09:04:32Z",
+          "2023-10-05T11:46:25Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add an infusion pump in Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_lm34",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"infusion pump\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_lm34",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"No available infusion pumps. Unable to add in Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we currently have no available infusion pumps. We cannot add one in Room 402 for patient Jane Smith at this time.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add a heart monitor in Room 402 for patient Jane Smith then?",
+        "time": "2023-10-01T08:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_xy77",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"402\", \"equipment\": \"heart monitor\", \"patient\": \"Jane Smith\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_xy77",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Heart monitor added in Room 402 for patient Jane Smith.\"}",
+        "time": "2023-10-01T08:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added a heart monitor in Room 402 for patient Jane Smith.",
+        "time": "2023-10-01T08:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Add an infusion pump in Room 402 for patient Jane Smith.",
+        "time": [
+          "2023-10-01T08:01:16Z",
+          "2023-10-01T08:04:24Z",
+          "2023-10-01T10:14:30Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_rep_after_failure_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful medical device monitor and management assistant that helps users monitor ICU vitals, manage alarm states and add equipment in a room.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please add a defibrillator in Room 202 for patient Emily Clark.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab45",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"202\", \"equipment\": \"defibrillator\", \"patient\": \"Emily Clark\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab45",
+        "name": "add_equipment",
+        "content": "{\"status\":\"failed\",\"message\":\"Defibrillator stock exhausted. Unable to add in Room 202 for patient Emily Clark.\"}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm sorry, we are currently out of defibrillators. We cannot add one in Room 202 for patient Emily Clark at this time.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you add an infusion pump in Room 202 for patient Emily Clark instead?",
+        "time": "2023-10-01T08:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_cd78",
+            "function": {
+              "name": "add_equipment",
+              "arguments": "{\"room\": \"202\", \"equipment\": \"infusion pump\", \"patient\": \"Emily Clark\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_cd78",
+        "name": "add_equipment",
+        "content": "{\"status\":\"success\",\"message\":\"Infusion pump added in Room 202 for patient Emily Clark.\"}",
+        "time": "2023-10-01T08:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have successfully added an infusion pump in Room 202 for patient Emily Clark.",
+        "time": "2023-10-01T08:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Add a defibrillator in Room 202 for patient Emily Clark.",
+        "time": [
+          "2023-10-01T08:00:43Z",
+          "2023-10-01T08:03:42Z",
+          "2023-10-01T11:37:26Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "add_equipment",
+          "description": "Add a specific equipment in a room for a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "equipment": {
+                "type": "string"
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "equipment",
+              "patient"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What are the vitals for patient Alice Brown?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_XYZ1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Brown\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_XYZ1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Brown\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 14, \"oxygen_saturation\": 99}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Alice Brown: \n- Heart Rate: 75 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 14 breaths per minute\n- Oxygen Saturation: 99%",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Adjust the bed settings for patient Bob White.",
+        "time": "2023-10-01T08:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Sure, could you please specify the settings you would like to adjust for Bob White's bed?",
+        "time": "2023-10-01T08:02:05Z"
+      },
+      {
+        "role": "user",
+        "content": "Please raise the head of the bed by 30 degrees.",
+        "time": "2023-10-01T08:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_AB12",
+            "function": {
+              "name": "adjust_bed_settings",
+              "arguments": "{\"patient_name\": \"Bob White\", \"adjustment\": \"raise head 30 degrees\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_AB12",
+        "name": "adjust_bed_settings",
+        "content": "{\"status\": \"success\", \"message\": \"The head of Bob White's bed has been raised by 30 degrees.\"}",
+        "time": "2023-10-01T08:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The head of Bob White's bed has been successfully raised by 30 degrees.",
+        "time": "2023-10-01T08:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current heart rate alarm setting for Alice Brown?",
+        "time": "2023-10-01T08:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_C45D",
+            "function": {
+              "name": "get_alarm_settings",
+              "arguments": "{\"patient_name\": \"Alice Brown\", \"parameter\": \"heart_rate\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_C45D",
+        "name": "get_alarm_settings",
+        "content": "{\"patient\": \"Alice Brown\", \"alarm_settings\": {\"parameter\": \"heart_rate\", \"threshold\": 110, \"condition\": \"above\"}}",
+        "time": "2023-10-01T08:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The current heart rate alarm setting for Alice Brown is set to trigger if it goes above 110 BPM.",
+        "time": "2023-10-01T08:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Raise the head of the bed by 30 degrees.",
+        "time": [
+          "2023-10-01T08:03:13Z",
+          "2023-10-01T08:06:38Z",
+          "2023-10-01T11:23:05Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "adjust_bed_settings",
+          "description": "Adjust the bed settings for a specified patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "adjustment": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "adjustment"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_alarm_settings",
+          "description": "Retrieve current alarm settings for a specific vital sign of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-05T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Emily Clark?",
+        "time": "2023-10-05T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_XYZ1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Emily Clark\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_XYZ1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Emily Clark\", \"heart_rate\": 72, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 20, \"oxygen_saturation\": 97}",
+        "time": "2023-10-05T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Emily Clark: \n- Heart Rate: 72 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 20 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-10-05T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Emily Clark's respiratory rate goes below 12 breaths per minute.",
+        "time": "2023-10-05T09:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ABC2",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Emily Clark\", \"parameter\": \"respiratory_rate\", \"threshold\": 12, \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-05T09:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ABC2",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Emily Clark. If her respiratory rate goes below 12, an alert will be triggered.\"}",
+        "time": "2023-10-05T09:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Emily Clark. If her respiratory rate goes below 12, an alert will be triggered.",
+        "time": "2023-10-05T09:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What equipment is currently available in ICU room 5?",
+        "time": "2023-10-05T09:06:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": "ICU room 5 currently has the following equipment available: \n- Ventilator \n- Infusion Pump \n- Cardiac Monitor",
+        "time": "2023-10-05T09:06:05Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the ventilator in ICU room 5 operational?",
+        "time": "2023-10-05T09:08:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, the ventilator in ICU room 5 is operational.",
+        "time": "2023-10-05T09:08:05Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Emily Clark's respiratory rate goes below 12 breaths per minute.",
+        "time": [
+          "2023-10-05T09:08:09Z",
+          "2023-10-05T09:11:23Z",
+          "2023-10-05T11:55:56Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "number"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me the blood pressure for patient Alice Grant?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_x9d1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Grant\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_x9d1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Grant\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 14, \"oxygen_saturation\": 97}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Alice Grant's current Blood Pressure is 115/75 mmHg.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if her blood pressure goes above 130/90.",
+        "time": "2023-10-01T08:01:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_q5k3",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Alice Grant\", \"parameter\": \"blood_pressure\", \"threshold\": \"130/90\", \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_q5k3",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Alice Grant. If her blood pressure goes above 130/90, an alert will be triggered.\"}",
+        "time": "2023-10-01T08:01:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Alice Grant. If her blood pressure goes above 130/90, an alert will be triggered.",
+        "time": "2023-10-01T08:01:26Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the respiratory rate of Michael Brown in ICU?",
+        "time": "2023-10-01T08:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_m7p4",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Michael Brown\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_m7p4",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Michael Brown\", \"heart_rate\": 88, \"blood_pressure\": \"125/85\", \"respiratory_rate\": 20, \"oxygen_saturation\": 95}",
+        "time": "2023-10-01T08:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Michael Brown's current Respiratory Rate is 20 breaths per minute.",
+        "time": "2023-10-01T08:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if her blood pressure goes above 130/90.",
+        "time": [
+          "2023-10-01T08:02:45Z",
+          "2023-10-01T08:04:12Z",
+          "2023-10-01T11:01:11Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the current vitals for patient Alice Johnson?",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_aw45",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Johnson\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_aw45",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Johnson\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 14, \"oxygen_saturation\": 99}",
+        "time": "2023-10-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the current vitals for Alice Johnson: \n- Heart Rate: 75 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 14 breaths per minute\n- Oxygen Saturation: 99%",
+        "time": "2023-10-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you ensure that if Alice Johnson's blood pressure falls below 110/70, an alarm is set?",
+        "time": "2023-10-01T10:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ap58",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Alice Johnson\", \"parameter\": \"blood_pressure\", \"threshold\": \"110/70\", \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ap58",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Alice Johnson. If her blood pressure falls below 110/70 mmHg, an alert will be triggered.\"}",
+        "time": "2023-10-01T10:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Alice Johnson. If her blood pressure falls below 110/70 mmHg, an alert will be triggered.",
+        "time": "2023-10-01T10:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current heart rate of patient Mark Davidson?",
+        "time": "2023-10-01T10:05:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_gk23",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Mark Davidson\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:05:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_gk23",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Mark Davidson\", \"heart_rate\": 88, \"blood_pressure\": \"130/85\", \"respiratory_rate\": 20, \"oxygen_saturation\": 97}",
+        "time": "2023-10-01T10:05:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mark Davidson's current heart rate is 88 BPM.",
+        "time": "2023-10-01T10:05:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please set an alarm if Mark Davidson's heart rate exceeds 90 BPM.",
+        "time": "2023-10-01T10:07:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ks67",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Mark Davidson\", \"parameter\": \"heart_rate\", \"threshold\": 90, \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:07:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ks67",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Mark Davidson. If his heart rate exceeds 90 BPM, an alert will be triggered.\"}",
+        "time": "2023-10-01T10:07:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Mark Davidson. If his heart rate exceeds 90 BPM, an alert will be triggered.",
+        "time": "2023-10-01T10:07:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Mark Davidson's heart rate goes above 90 BPM.",
+        "time": [
+          "2023-10-01T10:07:29Z",
+          "2023-10-01T10:11:24Z",
+          "2023-10-01T12:09:03Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-15T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Emma Brown?",
+        "time": "2023-10-15T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_A2B3",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Emma Brown\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-15T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_A2B3",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Emma Brown\", \"heart_rate\": 75, \"blood_pressure\": \"118/76\", \"respiratory_rate\": 15, \"oxygen_saturation\": 97}",
+        "time": "2023-10-15T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Emma Brown: \n- Heart Rate: 75 BPM\n- Blood Pressure: 118/76 mmHg\n- Respiratory Rate: 15 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-10-15T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Emma Brown's respiratory rate goes below 12 breaths per minute.",
+        "time": "2023-10-15T09:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_C4D5",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Emma Brown\", \"parameter\": \"respiratory_rate\", \"threshold\": 12, \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-15T09:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_C4D5",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Emma Brown. If her respiratory rate goes below 12 breaths per minute, an alert will be triggered.\"}",
+        "time": "2023-10-15T09:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Emma Brown. If her respiratory rate goes below 12 breaths per minute, an alert will be triggered.",
+        "time": "2023-10-15T09:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current heart rate for patient Michael Green?",
+        "time": "2023-10-15T09:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_E6F7",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Michael Green\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-15T09:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_E6F7",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Michael Green\", \"heart_rate\": 85, \"blood_pressure\": \"130/85\", \"respiratory_rate\": 17, \"oxygen_saturation\": 95}",
+        "time": "2023-10-15T09:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Michael Green's current heart rate is 85 BPM.",
+        "time": "2023-10-15T09:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Michael Green's blood pressure exceeds 140.",
+        "time": "2023-10-15T09:04:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_G8H9",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Michael Green\", \"parameter\": \"blood_pressure\", \"threshold\": 140, \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-15T09:04:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_G8H9",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Michael Green. If his blood pressure exceeds 140 mmHg, an alert will be triggered.\"}",
+        "time": "2023-10-15T09:04:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Michael Green. If his blood pressure exceeds 140 mmHg, an alert will be triggered.",
+        "time": "2023-10-15T09:04:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Michael Green's blood pressure exceeds 140.",
+        "time": [
+          "2023-10-15T09:04:15Z",
+          "2023-10-15T09:07:19Z",
+          "2023-10-15T12:25:35Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string",
+                "enum": [
+                  "heart_rate",
+                  "blood_pressure",
+                  "respiratory_rate",
+                  "oxygen_saturation"
+                ]
+              },
+              "threshold": {
+                "type": "number"
+              },
+              "condition": {
+                "type": "string",
+                "enum": [
+                  "above",
+                  "below"
+                ]
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What are the vitals for patient Emily Carter?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_5XW1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Emily Carter\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5XW1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Emily Carter\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 17, \"oxygen_saturation\": 97}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Emily Carter: \n- Heart Rate: 75 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 17 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you set an alarm if Emily Carter's blood pressure goes below 100/60?",
+        "time": "2023-10-01T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_k8m3",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Emily Carter\", \"parameter\": \"blood_pressure\", \"threshold\": \"100/60\", \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_k8m3",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Emily Carter. If her blood pressure goes below 100/60, an alert will be triggered.\"}",
+        "time": "2023-10-01T08:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Emily Carter. If her blood pressure goes below 100/60, an alert will be triggered.",
+        "time": "2023-10-01T08:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the heart rate for patient Michael Johnson?",
+        "time": "2023-10-01T08:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_n2q9",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Michael Johnson\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_n2q9",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Michael Johnson\", \"heart_rate\": 82, \"blood_pressure\": \"118/78\", \"respiratory_rate\": 15, \"oxygen_saturation\": 95}",
+        "time": "2023-10-01T08:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Michael Johnson's current heart rate is 82 BPM.",
+        "time": "2023-10-01T08:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Alert me if his heart rate goes above 100 BPM.",
+        "time": "2023-10-01T08:04:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_7zv4",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Michael Johnson\", \"parameter\": \"heart_rate\", \"threshold\": \"100\", \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:04:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_7zv4",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Michael Johnson. If his heart rate goes above 100 BPM, an alert will be triggered.\"}",
+        "time": "2023-10-01T08:04:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Michael Johnson. If his heart rate goes above 100 BPM, an alert will be triggered.",
+        "time": "2023-10-01T08:04:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if his heart rate goes above 100 BPM.",
+        "time": [
+          "2023-10-01T08:04:45Z",
+          "2023-10-01T08:06:48Z",
+          "2023-10-01T12:10:30Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-12T08:00:15Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide me with the vitals for patient Emily Rogers?",
+        "time": "2023-10-12T08:00:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_5ZA1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{ \"patient_name\": \"Emily Rogers\" }"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-12T08:00:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5ZA1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Emily Rogers\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 18, \"oxygen_saturation\": 97}",
+        "time": "2023-10-12T08:00:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Emily Rogers: \n- Heart Rate: 75 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 18 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-10-12T08:00:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you adjust the equipment settings in room 204 to prioritize patient comfort?",
+        "time": "2023-10-12T08:01:45Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I have adjusted the equipment settings in room 204 to prioritize patient comfort.",
+        "time": "2023-10-12T08:01:50Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current heart rate for patient Michael Johnson?",
+        "time": "2023-10-12T08:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_Q1X3",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{ \"patient_name\": \"Michael Johnson\" }"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-12T08:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_Q1X3",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Michael Johnson\", \"heart_rate\": 88, \"blood_pressure\": \"130/85\", \"respiratory_rate\": 20, \"oxygen_saturation\": 94}",
+        "time": "2023-10-12T08:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Michael Johnson's current heart rate is 88 BPM.",
+        "time": "2023-10-12T08:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Michael Johnson's blood pressure goes above 135/85.",
+        "time": "2023-10-12T08:04:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_K9M4",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{ \"patient_name\": \"Michael Johnson\", \"parameter\": \"blood_pressure\", \"threshold\": \"135/85\", \"condition\": \"above\" }"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-12T08:04:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_K9M4",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Michael Johnson. If his blood pressure goes above 135/85, an alert will be triggered.\"}",
+        "time": "2023-10-12T08:04:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Michael Johnson. If his blood pressure goes above 135/85, an alert will be triggered.",
+        "time": "2023-10-12T08:04:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if his blood pressure goes above 135/85.",
+        "time": [
+          "2023-10-12T08:04:43Z",
+          "2023-10-12T08:08:26Z",
+          "2023-10-12T11:57:40Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Alice Johnson?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_xA12",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Johnson\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_xA12",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Johnson\", \"heart_rate\": 78, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 17, \"oxygen_saturation\": 97}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Alice Johnson: \n- Heart Rate: 78 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 17 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Alice Johnson's blood pressure goes above 130/85.",
+        "time": "2023-10-01T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_mZ44",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Alice Johnson\", \"parameter\": \"blood_pressure\", \"threshold\": \"130/85\", \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_mZ44",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Alice Johnson. If their blood pressure goes above 130/85, an alert will be triggered.\"}",
+        "time": "2023-10-01T08:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Alice Johnson. If her blood pressure goes above 130/85, an alert will be triggered.",
+        "time": "2023-10-01T08:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Check the current respiratory rate for patient Michael Brown.",
+        "time": "2023-10-01T08:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_bV67",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Michael Brown\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_bV67",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Michael Brown\", \"heart_rate\": 88, \"blood_pressure\": \"118/76\", \"respiratory_rate\": 19, \"oxygen_saturation\": 95}",
+        "time": "2023-10-01T08:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Michael Brown's current Respiratory Rate is 19 breaths per minute.",
+        "time": "2023-10-01T08:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Michael Brown's oxygen saturation drops below 90%.",
+        "time": "2023-10-01T08:04:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_vW29",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Michael Brown\", \"parameter\": \"oxygen_saturation\", \"threshold\": 90, \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:04:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_vW29",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Michael Brown. If their oxygen saturation drops below 90%, an alert will be triggered.\"}",
+        "time": "2023-10-01T08:04:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Michael Brown. If his oxygen saturation drops below 90%, an alert will be triggered.",
+        "time": "2023-10-01T08:04:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if his oxygen saturation drops below 90%.",
+        "time": [
+          "2023-10-01T08:04:43Z",
+          "2023-10-01T08:08:29Z",
+          "2023-10-01T11:59:47Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": [
+                  "integer",
+                  "string"
+                ]
+              },
+              "condition": {
+                "type": "string",
+                "enum": [
+                  "above",
+                  "below"
+                ]
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-03-10T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you get the latest vitals for patient Alice Johnson?",
+        "time": "2023-03-10T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_4KD9",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Johnson\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4KD9",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Johnson\", \"heart_rate\": 75, \"blood_pressure\": \"115/75\", \"respiratory_rate\": 14, \"oxygen_saturation\": 97}",
+        "time": "2023-03-10T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the latest vitals for Alice Johnson: \n- Heart Rate: 75 BPM\n- Blood Pressure: 115/75 mmHg\n- Respiratory Rate: 14 breaths per minute\n- Oxygen Saturation: 97%",
+        "time": "2023-03-10T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Alice Johnson's blood pressure goes above 130/85.",
+        "time": "2023-03-10T09:03:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_l8X3",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Alice Johnson\", \"parameter\": \"blood_pressure\", \"threshold\": \"130/85\", \"condition\": \"above\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T09:03:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_l8X3",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Alice Johnson. If her blood pressure goes above 130/85, an alert will be triggered.\"}",
+        "time": "2023-03-10T09:03:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Alice Johnson. If her blood pressure goes above 130/85, an alert will be triggered.",
+        "time": "2023-03-10T09:03:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you update me on the equipment status in room 203?",
+        "time": "2023-03-10T09:05:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The equipment in room 203 is fully operational with no reported issues.",
+        "time": "2023-03-10T09:05:35Z"
+      },
+      {
+        "role": "user",
+        "content": "Check the current oxygen saturation for patient Bob Brown.",
+        "time": "2023-03-10T09:07:45Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_q5N1",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Bob Brown\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T09:07:50Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_q5N1",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Bob Brown\", \"heart_rate\": 82, \"blood_pressure\": \"118/82\", \"respiratory_rate\": 15, \"oxygen_saturation\": 95}",
+        "time": "2023-03-10T09:07:51Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bob Brown's current oxygen saturation is 95%.",
+        "time": "2023-03-10T09:07:56Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Alice Johnson's blood pressure goes above 130/85.",
+        "time": [
+          "2023-03-10T09:07:59Z",
+          "2023-03-10T09:10:52Z",
+          "2023-03-10T13:12:33Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_request_repeat_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor medical devices and manage alarm states.",
+        "time": "2023-03-21T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient Alice Green?",
+        "time": "2023-03-21T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_A1B2",
+            "function": {
+              "name": "get_icu_vitals",
+              "arguments": "{\"patient_name\": \"Alice Green\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-21T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_A1B2",
+        "name": "get_icu_vitals",
+        "content": "{\"patient\": \"Alice Green\", \"heart_rate\": 72, \"blood_pressure\": \"115/76\", \"respiratory_rate\": 15, \"oxygen_saturation\": 99}",
+        "time": "2023-03-21T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the vitals for Alice Green: \n- Heart Rate: 72 BPM\n- Blood Pressure: 115/76 mmHg\n- Respiratory Rate: 15 breaths per minute\n- Oxygen Saturation: 99%",
+        "time": "2023-03-21T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Please ensure the ventilator is functioning properly for Alice Green.",
+        "time": "2023-03-21T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The ventilator for Alice Green is functioning properly and all parameters are within normal range.",
+        "time": "2023-03-21T08:01:35Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Alice Green's blood pressure drops below 100/60.",
+        "time": "2023-03-21T08:03:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_C3D4",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_name\": \"Alice Green\", \"parameter\": \"blood_pressure\", \"threshold\": \"100/60\", \"condition\": \"below\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-21T08:03:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_C3D4",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"An alarm has been set for Alice Green. If her blood pressure drops below 100/60, an alert will be triggered.\"}",
+        "time": "2023-03-21T08:03:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "An alarm has been set for Alice Green. If her blood pressure drops below 100/60, an alert will be triggered.",
+        "time": "2023-03-21T08:03:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the current status of the equipment in room 101?",
+        "time": "2023-03-21T08:04:45Z"
+      },
+      {
+        "role": "assistant",
+        "content": "In room 101, all equipment is functioning normally. No issues have been detected.",
+        "time": "2023-03-21T08:04:50Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if Alice Green's blood pressure drops below 100/60.",
+        "time": [
+          "2023-03-21T08:04:51Z",
+          "2023-03-21T08:05:50Z",
+          "2023-03-21T10:53:46Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_icu_vitals",
+          "description": "Retrieve the current vitals for a patient in the ICU",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital sign of a patient to trigger when a condition is met",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_name": {
+                "type": "string"
+              },
+              "parameter": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_name",
+              "parameter",
+              "threshold",
+              "condition"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient ID 67890?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_8lmn",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_8lmn",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"68\", \"blood_pressure\": \"125/85\", \"oxygen_saturation\": \"95%\", \"respiratory_rate\": \"20\"}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The vitals for patient ID 67890 are: Heart rate 68 BPM, Blood pressure 125/85 mmHg, Oxygen saturation 95%, and Respiratory rate 20 breaths per minute.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if the blood pressure goes above 140/90.",
+        "time": "2023-10-01T08:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_9nyv",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"blood_pressure\", \"threshold\": \"140/90\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_9nyv",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if blood pressure goes above 140/90.\"}",
+        "time": "2023-10-01T08:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the blood pressure goes above 140/90.",
+        "time": "2023-10-01T08:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm set for blood pressure at 140/90 for patient ID 67890?",
+        "time": [
+          "2023-10-01T08:00:44Z",
+          "2023-10-01T08:01:41Z",
+          "2023-10-01T12:00:00Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the current oxygen saturation for patient ID 67890?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_r8df",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_r8df",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"oxygen_saturation\": \"91%\"}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The current oxygen saturation for patient ID 67890 is 91%.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "That's low. Set an alarm if it drops below 90.",
+        "time": "2023-10-01T08:02:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_3wty",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"90\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:02:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_3wty",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation drops below 90.\"}",
+        "time": "2023-10-01T08:02:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation drops below 90.",
+        "time": "2023-10-01T08:02:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm threshold for oxygen saturation set at 90 for patient ID 67890?",
+        "time": [
+          "2023-10-01T08:02:44Z",
+          "2023-10-01T08:05:24Z",
+          "2023-10-01T11:46:04Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T08:00:15Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current oxygen saturation for patient ID 67890?",
+        "time": "2023-10-01T08:00:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_4bth",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4bth",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"65\", \"blood_pressure\": \"115/75\", \"oxygen_saturation\": \"95%\", \"respiratory_rate\": \"20\"}]",
+        "time": "2023-10-01T08:00:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The current oxygen saturation for patient ID 67890 is 95%.",
+        "time": "2023-10-01T08:00:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Please set an alarm if the oxygen saturation drops below 92%.",
+        "time": "2023-10-01T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_5jrz",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"92\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5jrz",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation drops below 92%.\"}",
+        "time": "2023-10-01T08:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation drops below 92%.",
+        "time": "2023-10-01T08:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm threshold for oxygen saturation set at 92% for patient ID 67890?",
+        "time": [
+          "2023-10-01T08:01:45Z",
+          "2023-10-01T08:03:31Z",
+          "2023-10-01T12:06:37Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please check the status of the ventilator in room 205.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab12",
+            "function": {
+              "name": "check_device_status",
+              "arguments": "{\"room\": \"205\", \"device\": \"ventilator\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab12",
+        "name": "check_device_status",
+        "content": "{\"room\": \"205\", \"device\": \"ventilator\", \"status\": \"operational\"}",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The ventilator in room 205 is operational.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the ventilator in room 205 operational?",
+        "time": [
+          "2023-10-01T09:00:15Z",
+          "2023-10-01T09:04:19Z",
+          "2023-10-01T12:37:41Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "check_device_status",
+          "description": "Check the status of a device in a specific room",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "room": {
+                "type": "string"
+              },
+              "device": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "room",
+              "device"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you show me the vitals for patient ID 67890?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ax72",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ax72",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"65\", \"blood_pressure\": \"115/75\", \"oxygen_saturation\": \"99%\", \"respiratory_rate\": \"16\"}]",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The vitals for patient ID 67890 are: Heart rate 65 BPM, Blood pressure 115/75 mmHg, Oxygen saturation 99%, and Respiratory rate 16 breaths per minute.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if the oxygen saturation drops below 95.",
+        "time": "2023-10-01T08:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_bx39",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"95\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_bx39",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation drops below 95.\"}",
+        "time": "2023-10-01T08:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation drops below 95.",
+        "time": "2023-10-01T08:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the oxygen saturation alarm set for patient ID 67890?",
+        "time": [
+          "2023-10-01T08:02:14Z",
+          "2023-10-01T08:03:44Z",
+          "2023-10-01T10:46:27Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you display the current vitals for patient ID 67890?",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_x2hj",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_x2hj",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"85\", \"blood_pressure\": \"115/75\", \"oxygen_saturation\": \"96%\", \"respiratory_rate\": \"20\"}]",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The vitals for patient ID 67890 are: Heart rate 85 BPM, Blood pressure 115/75 mmHg, Oxygen saturation 96%, and Respiratory rate 20 breaths per minute.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if the oxygen saturation falls below 92.",
+        "time": "2023-10-01T09:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_abc3",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"92\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_abc3",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation falls below 92.\"}",
+        "time": "2023-10-01T09:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation falls below 92.",
+        "time": "2023-10-01T09:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm set threshold for oxygen saturation at 92 for patient ID 67890?",
+        "time": [
+          "2023-10-01T09:01:13Z",
+          "2023-10-01T09:04:13Z",
+          "2023-10-01T12:00:04Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-03-15T08:00:15Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you display the vitals for patient ID 67890?",
+        "time": "2023-03-15T08:00:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_4dfg",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T08:00:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4dfg",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"68\", \"blood_pressure\": \"115/75\", \"oxygen_saturation\": \"99%\", \"respiratory_rate\": \"16\"}]",
+        "time": "2023-03-15T08:00:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The vitals for patient ID 67890 are: Heart rate 68 BPM, Blood pressure 115/75 mmHg, Oxygen saturation 99%, and Respiratory rate 16 breaths per minute.",
+        "time": "2023-03-15T08:00:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm for blood pressure if it drops below 110/70.",
+        "time": "2023-03-15T08:01:45Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_5hij",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"blood_pressure\", \"threshold\": \"110/70\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T08:01:50Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5hij",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if blood pressure drops below 110/70.\"}",
+        "time": "2023-03-15T08:01:51Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the blood pressure drops below 110/70.",
+        "time": "2023-03-15T08:01:56Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm request for the blood pressure threshold on patient ID 67890 set at 110/70?",
+        "time": [
+          "2023-03-15T08:02:00Z",
+          "2023-03-15T08:05:31Z",
+          "2023-03-15T12:50:50Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "I need the current oxygen saturation for patient ID 67890.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ab12",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ab12",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"82\", \"blood_pressure\": \"130/85\", \"oxygen_saturation\": \"94%\", \"respiratory_rate\": \"16\"}]",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The oxygen saturation for patient ID 67890 is 94%.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you set a low oxygen saturation alarm at 90% for this patient?",
+        "time": "2023-10-01T09:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_bc34",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"90\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_bc34",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation falls below 90%.\"}",
+        "time": "2023-10-01T09:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation falls below 90%.",
+        "time": "2023-10-01T09:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the low oxygen saturation alarm set at 90% for patient ID 67890?",
+        "time": [
+          "2023-10-01T09:01:43Z",
+          "2023-10-01T09:05:01Z",
+          "2023-10-01T10:18:27Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please show me the current oxygen saturation level for patient ID 67890.",
+        "time": "2023-10-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_a1bc",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_a1bc",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"65\", \"blood_pressure\": \"115/75\", \"oxygen_saturation\": \"95%\", \"respiratory_rate\": \"20\"}]",
+        "time": "2023-10-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The current oxygen saturation level for patient ID 67890 is 95%.",
+        "time": "2023-10-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if the oxygen saturation goes below 90 for this patient.",
+        "time": "2023-10-01T09:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_b2de",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"oxygen_saturation\", \"threshold\": \"90\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T09:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_b2de",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if oxygen saturation goes below 90.\"}",
+        "time": "2023-10-01T09:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the oxygen saturation goes below 90.",
+        "time": "2023-10-01T09:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm set for oxygen saturation below 90 for patient ID 67890?",
+        "time": [
+          "2023-10-01T09:00:45Z",
+          "2023-10-01T09:03:07Z",
+          "2023-10-01T10:00:41Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "live_medical_device_monitor_usr_confirm_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful ICU monitoring assistant that helps users monitor ICU vitals and manage alarm states.",
+        "time": "2023-10-03T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Please show me the latest vitals for patient ID 67890.",
+        "time": "2023-10-03T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_a1bc",
+            "function": {
+              "name": "display_vitals",
+              "arguments": "{\"patient_id\": \"67890\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-03T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_a1bc",
+        "name": "display_vitals",
+        "content": "[{\"patient_id\": \"67890\", \"heart_rate\": \"65\", \"blood_pressure\": \"130/85\", \"oxygen_saturation\": \"95%\", \"respiratory_rate\": \"20\"}]",
+        "time": "2023-10-03T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The latest vitals for patient ID 67890 are: Heart rate 65 BPM, Blood pressure 130/85 mmHg, Oxygen saturation 95%, and Respiratory rate 20 breaths per minute.",
+        "time": "2023-10-03T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Set an alarm if the blood pressure goes above 140/90.",
+        "time": "2023-10-03T08:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_d2ef",
+            "function": {
+              "name": "set_alarm",
+              "arguments": "{\"patient_id\": \"67890\", \"vital\": \"blood_pressure\", \"threshold\": \"140/90\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-03T08:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_d2ef",
+        "name": "set_alarm",
+        "content": "{\"status\": \"success\", \"message\": \"Alarm set for patient ID 67890 if blood pressure goes above 140/90.\"}",
+        "time": "2023-10-03T08:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "I've successfully set an alarm for patient ID 67890 if the blood pressure goes above 140/90.",
+        "time": "2023-10-03T08:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Is the alarm threshold set for blood pressure at 140/90 for patient ID 67890?",
+        "time": [
+          "2023-10-03T08:01:44Z",
+          "2023-10-03T08:05:10Z",
+          "2023-10-03T11:21:02Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "display_vitals",
+          "description": "Display the vitals of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "set_alarm",
+          "description": "Set an alarm for a specific vital of a patient",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patient_id": {
+                "type": "string"
+              },
+              "vital": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "patient_id",
+              "vital",
+              "threshold"
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

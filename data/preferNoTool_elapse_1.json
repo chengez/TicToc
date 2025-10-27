@@ -1,0 +1,2958 @@
+[
+  {
+    "id": "universitydegreeexample_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-04-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, can you tell me the graduation requirements for the Bachelor of Science in Computer Science program?",
+        "time": "2023-04-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Science in Computer Science\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-04-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Science in Computer Science\", \"requirements\": {\"core_courses\": [\"CS101\", \"CS102\", \"CS103\", \"CS104\", \"CS105\"], \"elective_courses\": [\"CS201\", \"CS202\", \"CS203\", \"CS204\"], \"credits_required\": 120, \"gpa_required\": 2.0}}",
+        "time": "2023-04-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Science in Computer Science program include completing core courses such as CS101, CS102, CS103, CS104, and CS105. You can also choose electives from courses like CS201, CS202, CS203, and CS204. The program requires a total of 120 credits and a minimum GPA of 2.0.",
+        "time": "2023-04-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What are the elective courses I can take in the Bachelor of Science in Computer Science program?",
+        "time": [
+          "2023-04-01T10:02:43Z",
+          "2023-04-05T01:33:25Z",
+          "2023-06-24T00:09:06Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Science in Computer Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you tell me the graduation requirements for the Bachelor of Arts in Creative Writing at Crestwood University?",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Arts in Creative Writing\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Arts in Creative Writing\", \"requirements\": {\"core_courses\": [\"CW101\", \"CW102\", \"CW103\", \"CW104\"], \"elective_courses\": [\"CW201\", \"CW202\", \"CW203\"], \"credits_required\": 120, \"gpa_required\": 2.0}}",
+        "time": "2023-10-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Arts in Creative Writing at Crestwood University include core courses such as CW101, CW102, CW103, and CW104. Elective options include CW201, CW202, and CW203. You'll need to complete a total of 120 credits with a minimum GPA of 2.0.",
+        "time": "2023-10-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Now, what are the graduation requirements for the Bachelor of Fine Arts in Digital Storytelling at Crestwood University?",
+        "time": "2023-10-01T10:01:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Fine Arts in Digital Storytelling\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:01:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Fine Arts in Digital Storytelling\", \"requirements\": {\"core_courses\": [\"DS101\", \"DS102\", \"DS103\"], \"elective_courses\": [\"DS201\", \"DS202\", \"DS203\", \"DS204\"], \"credits_required\": 130, \"gpa_required\": 3.0}}",
+        "time": "2023-10-01T10:01:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "For the Bachelor of Fine Arts in Digital Storytelling at Crestwood University, the requirements include completing core courses such as DS101, DS102, and DS103, along with electives like DS201, DS202, DS203, and DS204. You'll need to earn 130 credits with a minimum GPA of 3.0.",
+        "time": "2023-10-01T10:01:41Z"
+      },
+      {
+        "role": "user",
+        "content": "How do the graduation requirements for the Bachelor of Arts in Creative Writing compare to those for the Bachelor of Fine Arts in Digital Storytelling at Crestwood University?",
+        "time": [
+          "2023-10-01T10:05:37Z",
+          "2023-10-06T12:37:27Z",
+          "2024-02-16T05:05:13Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Science in Computer Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, could you provide the graduation requirements for the Bachelor of Science in Environmental Science program?",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Science in Environmental Science\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Science in Environmental Science\", \"requirements\": {\"core_courses\": [\"ENVS101\", \"ENVS102\", \"ENVS103\", \"ENVS104\"], \"fieldwork_courses\": [\"ENVS201\", \"ENVS202\", \"ENVS203\"], \"credits_required\": 110, \"gpa_required\": 2.5}}",
+        "time": "2023-03-15T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The Bachelor of Science in Environmental Science requires completion of core courses such as ENVS101, ENVS102, ENVS103, and ENVS104. You also need to complete fieldwork courses like ENVS201, ENVS202, and ENVS203. In total, you need 110 credits, and a minimum GPA of 2.5 is required.",
+        "time": "2023-03-15T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I complete an additional 15-credit course on Environmental Policy, how many total credits will I have?",
+        "time": [
+          "2023-03-15T09:01:11Z",
+          "2023-03-18T05:27:22Z",
+          "2023-07-22T15:41:39Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Science in Environmental Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, could you tell me the graduation requirements for the Master of Fine Arts in Sculpture at the Williams Institute of Art?",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Master of Fine Arts in Sculpture at Williams Institute of Art\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Master of Fine Arts in Sculpture\", \"requirements\": {\"core_courses\": [\"Sculpture101\", \"Sculpture102\", \"ContemporaryPractice\", \"ArtHistory\"] , \"elective_courses\": [\"AdvancedMetalsmithing\", \"DigitalFabrication\", \"EnvironmentalArt\"], \"credits_required\": 60, \"thesis_project\": \"Required\"}}",
+        "time": "2023-03-15T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The requirements for the Master of Fine Arts in Sculpture at the Williams Institute of Art include core courses like Sculpture101, Sculpture102, Contemporary Practice, and Art History. Electives offered include Advanced Metalsmithing, Digital Fabrication, and Environmental Art. Completion of 60 credits and a thesis project is required.",
+        "time": "2023-03-15T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about the Master of Fine Arts in Painting at the same institute?",
+        "time": "2023-03-15T09:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Master of Fine Arts in Painting at Williams Institute of Art\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Master of Fine Arts in Painting\", \"requirements\": {\"core_courses\": [\"Painting101\", \"AdvancedColorTheory\", \"ContemporaryArtStudies\"], \"elective_courses\": [\"MixedMedia\", \"DigitalImaging\", \"ExperimentalTechniques\"], \"credits_required\": 58, \"thesis_project\": \"Required\"}}",
+        "time": "2023-03-15T09:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The Master of Fine Arts in Painting at Williams Institute of Art requires core courses such as Painting101, Advanced Color Theory, and Contemporary Art Studies. Students can choose electives including Mixed Media, Digital Imaging, and Experimental Techniques. It requires completion of 58 credits and a thesis project.",
+        "time": "2023-03-15T09:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you compare the credit requirements and courses between the Sculpture and Painting MFA programs?",
+        "time": [
+          "2023-03-15T09:06:06Z",
+          "2023-03-17T17:34:13Z",
+          "2023-06-24T12:39:49Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Master of Fine Arts in Sculpture at Williams Institute of Art'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the graduation requirements for the Bachelor of Marine Biology program at Westshore University?",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Marine Biology\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Marine Biology\", \"requirements\": {\"core_courses\": [\"MB101\", \"MB102\", \"MB103\", \"MB104\", \"MB105\"], \"elective_courses\": [\"MB201\", \"MB202\", \"MB203\", \"MB204\"], \"credits_required\": 126, \"gpa_required\": 2.5}}",
+        "time": "2023-03-15T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Marine Biology program include completing core courses such as MB101, MB102, MB103, MB104, and MB105. You need to complete a total of 126 credits and maintain a minimum GPA of 2.5.",
+        "time": "2023-03-15T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What elective courses are available for the Bachelor of Marine Biology?",
+        "time": [
+          "2023-03-15T09:02:59Z",
+          "2023-03-17T21:00:18Z",
+          "2023-06-07T21:15:46Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Science in Computer Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-05-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, can you tell me about the graduation requirements for the Bachelor of Software Engineering program?",
+        "time": "2023-05-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Software Engineering\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-05-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Software Engineering\", \"requirements\": {\"core_courses\": [\"SE101\", \"SE201\", \"SE301\", \"AI101\", \"ML101\"], \"elective_courses\": [\"OS101\", \"OS201\", \"CS301\", \"CS302\"], \"credits_required\": 130, \"gpa_required\": 2.5}}",
+        "time": "2023-05-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Software Engineering program include completing core courses such as SE101, SE201, SE301, AI101, and ML101. Elective courses can be chosen from options like OS101, OS201, CS301, and CS302. The program requires a total of 130 credits and a minimum GPA of 2.5.",
+        "time": "2023-05-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I have already completed 80 credits, how many more credits do I need to graduate from the program?",
+        "time": [
+          "2023-05-01T10:02:56Z",
+          "2023-05-06T01:00:44Z",
+          "2023-07-19T15:02:42Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Software Engineering'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-09-15T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, could you provide me the graduation requirements for the Bachelor of Philosophy program at Grandview University?",
+        "time": "2023-09-15T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Philosophy\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-09-15T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Philosophy\", \"requirements\": {\"core_courses\": [\"P101\", \"P102\", \"P103\", \"P104\", \"P105\"], \"elective_courses\": [\"P201\", \"P202\", \"P203\", \"P204\"], \"credits_required\": 110, \"gpa_required\": 2.5}}",
+        "time": "2023-09-15T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Philosophy program include completing core courses like P101, P102, P103, P104, and P105. The program requires a total of 110 credits and a minimum GPA of 2.5.",
+        "time": "2023-09-15T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Which electives are offered in the Bachelor of Philosophy program?",
+        "time": [
+          "2023-09-15T10:02:40Z",
+          "2023-09-18T05:37:03Z",
+          "2023-12-04T07:16:41Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Philosophy'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-03-15T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, can you tell me the graduation requirements for the Bachelor of Music in Performance at the Old Town Academy of Music?",
+        "time": "2023-03-15T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Music in Performance\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Music in Performance\", \"requirements\": {\"core_courses\": [\"Music Theory 101\", \"Ear Training 101\", \"Performance Practice 101\", \"Music History 101\"], \"elective_courses\": [\"Contemporary Music Studies\", \"Collaborative Workshops\", \"Advanced Conducting\"], \"credits_required\": 130, \"ensemble_participation\": \"required\"}}",
+        "time": "2023-03-15T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Music in Performance at the Old Town Academy of Music include completing core courses like Music Theory 101, Ear Training 101, Performance Practice 101, and Music History 101. Elective courses such as Contemporary Music Studies, Collaborative Workshops, and Advanced Conducting are available. A total of 130 credits and participation in an ensemble are required.",
+        "time": "2023-03-15T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "How about the graduation requirements for the Bachelor of Music in Composition? I'm considering switching majors.",
+        "time": "2023-03-15T10:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Music in Composition\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T10:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Music in Composition\", \"requirements\": {\"core_courses\": [\"Composition Techniques 101\", \"Music Theory 102\", \"Orchestration\", \"20th Century Music\"], \"elective_courses\": [\"Film Scoring\", \"Electronic Music Production\", \"Advanced Harmony\"], \"credits_required\": 128, \"portfolio_submission\": \"required\"}}",
+        "time": "2023-03-15T10:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Music in Composition include core courses such as Composition Techniques 101, Music Theory 102, Orchestration, and 20th Century Music. You can choose electives like Film Scoring, Electronic Music Production, and Advanced Harmony. The program requires 128 credits, and a portfolio submission is mandatory.",
+        "time": "2023-03-15T10:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you help me compare the total credit requirements and any special participation or submission requirements between these two programs?",
+        "time": [
+          "2023-03-15T10:04:25Z",
+          "2023-03-18T06:27:58Z",
+          "2023-04-14T10:00:41Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Music in Performance'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, can you tell me the graduation requirements for the Bachelor of Agricultural Science program?",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Agricultural Science\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Agricultural Science\", \"requirements\": {\"core_courses\": [\"AG101\", \"AG102\", \"AG103\", \"AG104\"], \"elective_courses\": [\"AG201\", \"AG202\", \"AG203 (Organic Farming)\", \"AG204\"], \"credits_required\": 130, \"gpa_required\": 2.5}}",
+        "time": "2023-10-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Agricultural Science program include completing core courses such as AG101, AG102, AG103, and AG104. You can also choose electives from courses like AG201, AG202, AG203 (Organic Farming), and AG204. The program requires a total of 130 credits and a minimum GPA of 2.5.",
+        "time": "2023-10-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I want to focus on organic farming, how many more elective credits should I take if I have already completed the core courses?",
+        "time": [
+          "2023-10-01T10:01:56Z",
+          "2023-10-02T10:00:11Z",
+          "2023-12-17T12:08:44Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Agricultural Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "University_Degree_Requirements_12",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful university assistant that helps users retrieve degree requirements and make academic program advice.",
+        "time": "2023-03-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hello, could you provide the graduation requirements for the Bachelor of Arts in Creative Writing program?",
+        "time": "2023-03-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Arts in Creative Writing\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Arts in Creative Writing\", \"requirements\": {\"core_courses\": [\"CW101\", \"CW102\", \"CW103\"], \"elective_courses\": [\"CW201\", \"CW202\", \"CW203\", \"NEW_MEDIA101\"], \"credits_required\": 110, \"gpa_required\": 2.5}}",
+        "time": "2023-03-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Arts in Creative Writing include completing core courses like CW101, CW102, and CW103. You can also choose electives from courses like CW201, CW202, CW203, and NEW_MEDIA101. The program requires a total of 110 credits and a minimum GPA of 2.5.",
+        "time": "2023-03-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could I get the graduation requirements for the Bachelor of Arts in English Literature program?",
+        "time": "2023-03-01T10:01:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0003",
+            "function": {
+              "name": "get_degree_requirements",
+              "arguments": "{\"degree_program\": \"Bachelor of Arts in English Literature\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T10:01:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0003",
+        "name": "get_degree_requirements",
+        "content": "{\"degree_program\": \"Bachelor of Arts in English Literature\", \"requirements\": {\"core_courses\": [\"EL101\", \"EL102\", \"EL103\"], \"elective_courses\": [\"EL201\", \"EL202\", \"EL203\", \"THEATRE101\"], \"credits_required\": 120, \"gpa_required\": 2.0}}",
+        "time": "2023-03-01T10:01:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The graduation requirements for the Bachelor of Arts in English Literature include completing core courses like EL101, EL102, and EL103. You can also choose electives from courses such as EL201, EL202, EL203, and THEATRE101. The program requires a total of 120 credits and a minimum GPA of 2.0.",
+        "time": "2023-03-01T10:01:26Z"
+      },
+      {
+        "role": "user",
+        "content": "How do the Bachelor of Arts in Creative Writing and English Literature programs compare in terms of credit requirements?",
+        "time": [
+          "2023-03-01T10:04:42Z",
+          "2023-03-05T02:48:03Z",
+          "2023-05-17T23:00:14Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_degree_requirements",
+          "description": "Fetches the official curriculum and graduation requirements for a student based on the specified program. It returns a detailed list of courses and requirements needed to graduate for the specified program.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "degree_program": {
+                "type": "string",
+                "description": "The specific degree program for which requirements are being requested, e.g., 'Bachelor of Science in Computer Science'."
+              }
+            },
+            "required": [
+              "degree_program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "airlinebaggagepolicyexample_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-03-10T14:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me about the baggage policy of Delta Airlines for economy class?",
+        "time": "2023-03-10T14:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"DL\", \"travel_class\": \"economy\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-10T14:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"DL\", \"travel_class\": \"economy\", \"luggage_allowance\": \"1 bag\", \"size_limit\": \"62 inches\", \"fees\": \"$30\"}",
+        "time": "2023-03-10T14:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Delta Airlines in economy class allows you to carry 1 bag. The size limit is 62 inches and the fee is $30.",
+        "time": "2023-03-10T14:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "I have 32$ in my pocket. Can I bring a single bag or I need more money for that?",
+        "time": [
+          "2023-03-10T14:03:45Z",
+          "2023-03-13T00:35:30Z",
+          "2023-06-22T12:24:30Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-03-01T14:00:15Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me about the baggage policy of Lufthansa for business class since Sofia Petrova needs to fly to Vienna with her violin?",
+        "time": "2023-03-01T14:00:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"LH\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T14:00:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"LH\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"62 inches\", \"fees\": \"$70 for each additional bag over the allowance\"}",
+        "time": "2023-03-01T14:00:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Lufthansa in business class allows you to carry 2 bags. The size limit is 62 inches, and any additional bag over the allowance will incur a fee of $70.",
+        "time": "2023-03-01T14:00:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Sofia's violin case is 64 inches and counted as a third bag. With a budget of $200 for the luggage, is there enough to cover the excess size and extra bag fees?",
+        "time": [
+          "2023-03-01T14:03:10Z",
+          "2023-03-05T12:27:53Z",
+          "2023-05-09T22:11:52Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'LH' for Lufthansa Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-09-15T15:45:30Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the baggage policy for Air France's business class?",
+        "time": "2023-09-15T15:45:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"AF\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-09-15T15:45:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"AF\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"70 inches each\", \"fees\": \"$0\", \"extra bag cost\":\"100$\"}",
+        "time": "2023-09-15T15:45:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Air France in business class allows you to carry 2 bags. The size limit is 70 inches each, and there is no fee.",
+        "time": "2023-09-15T15:45:41Z"
+      },
+      {
+        "role": "user",
+        "content": "I'm planning a long trip. If I have 3 bags, how much extra would it cost me if I were to choose Air France business class?",
+        "time": [
+          "2023-09-15T15:48:39Z",
+          "2023-09-18T14:06:31Z",
+          "2023-12-19T04:07:42Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-01-20T10:15:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me about the baggage policy of Singapore Airlines for business class?",
+        "time": "2023-01-20T10:15:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"SQ\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-01-20T10:15:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"SQ\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"62 inches each\", \"fees\": \"no fees\"}",
+        "time": "2023-01-20T10:15:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Singapore Airlines in business class allows you to carry 2 bags, each with a size limit of 62 inches, and there are no additional fees.",
+        "time": "2023-01-20T10:15:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about the baggage policy of Cathay Pacific for business class?",
+        "time": "2023-01-20T10:15:20Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"CX\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-01-20T10:15:25Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"CX\", \"travel_class\": \"business\", \"luggage_allowance\": \"1 bag\", \"size_limit\": \"72 inches\", \"fees\": \"no fees\"}",
+        "time": "2023-01-20T10:15:26Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Cathay Pacific in business class allows you to carry 1 bag with a size limit of 72 inches and there are no additional fees.",
+        "time": "2023-01-20T10:15:31Z"
+      },
+      {
+        "role": "user",
+        "content": "How does the baggage policy for Singapore Airlines compare to Cathay Pacific for business class?",
+        "time": [
+          "2023-01-20T10:19:12Z",
+          "2023-01-22T16:11:14Z",
+          "2023-04-05T21:29:15Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide me with the carry-on baggage policy for business class on Qantas Airlines?",
+        "time": "2023-03-15T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"QF\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"QF\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 pieces\", \"size_limit\": \"115 cm per piece\", \"fees\": \"$0 for up to 2 pieces\"}",
+        "time": "2023-03-15T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The carry-on baggage policy for business class on Qantas Airlines allows you to bring 2 pieces of luggage. Each piece can be up to 115 cm in size, and there are no additional fees for up to 2 pieces.",
+        "time": "2023-03-15T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If my two carry-on pieces weigh 10kg and 15kg, can I still fly without additional fees?",
+        "time": [
+          "2023-03-15T09:01:52Z",
+          "2023-03-19T15:57:15Z",
+          "2023-05-30T04:43:02Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-09-15T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you provide the baggage policy for Lufthansa Airlines for business class? I need to make sure rare books are transported safely.",
+        "time": "2023-09-15T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"LH\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-09-15T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"LH\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"68 inches\", \"fees\": \"$0\", \"extra KG cost\":\"100$/kg\"}",
+        "time": "2023-09-15T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "For Lufthansa Airlines in business class, you're allowed 2 bags. The size limit is 68 inches, and there are no additional fees.",
+        "time": "2023-09-15T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If the total weight of my books exceeds the business class allowance by 5kg, what will the additional fees be?",
+        "time": [
+          "2023-09-15T10:02:34Z",
+          "2023-09-18T17:04:47Z",
+          "2023-12-24T13:54:30Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-03-15T08:30:45Z"
+      },
+      {
+        "role": "user",
+        "content": "I need to transport my bike for a race in Italy. Can you tell me about the baggage policy of KLM Airlines for economy class and if it includes sports equipment?",
+        "time": "2023-03-15T08:30:45Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"KL\", \"travel_class\": \"economy\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T08:30:50Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"KL\", \"travel_class\": \"economy\", \"luggage_allowance\": \"1 bag\", \"size_limit\": \"158 cm\", \"fees\": \"$55\", \"sports_equipment\": \"$100\", \"sports_equipment_size_limit\": \"210cm\"}",
+        "time": "2023-03-15T08:30:51Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Under KLM Airlines' economy class, you can carry 1 bag with a size limit of 158 cm for a fee of $55. Transporting sports equipment, such as a bike, costs an additional $100.",
+        "time": "2023-03-15T08:30:56Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the exact size limit for sports equipment on KLM Airlines in case I need to adjust the bike packaging?",
+        "time": [
+          "2023-03-15T08:34:18Z",
+          "2023-03-18T22:12:52Z",
+          "2023-06-11T01:58:50Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the baggage policy for Emirates Airlines in business class?",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"EK\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{[\"airline_code\": \"EK\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"70 inches per bag\", \"fees\": \"$0\"], [\"airline_code\": \"EK\", \"travel_class\": \"economy\", \"luggage_allowance\": \"1 bags\", \"size_limit\": \"70 inches per bag\", \"fees\": \"$0\"]}",
+        "time": "2023-10-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Emirates Airlines in business class allows you to carry 2 bags. The size limit is 70 inches per bag and there are no fees.",
+        "time": "2023-10-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about the economy class for Emirates? I’m particularly concerned about the size limit.",
+        "time": [
+          "2023-10-01T10:03:18Z",
+          "2023-10-03T05:40:43Z",
+          "2024-01-31T08:55:40Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you provide the baggage policy for Emirates Airlines in business class?",
+        "time": "2023-10-01T08:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"EK\", \"travel_class\": \"business\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"EK\", \"travel_class\": \"business\", \"luggage_allowance\": \"2 bags\", \"size_limit\": \"72 inches\", \"fees\": \"$0\"}",
+        "time": "2023-10-01T08:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Emirates Airlines in business class allows you to carry 2 bags with a size limit of 72 inches each. There are no fees for these bags.",
+        "time": "2023-10-01T08:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about Qatar Airways in economy class? I need to compare the two.",
+        "time": "2023-10-01T08:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"QR\", \"travel_class\": \"economy\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T08:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"QR\", \"travel_class\": \"economy\", \"luggage_allowance\": \"1 bag\", \"size_limit\": \"60 inches\", \"fees\": \"$25\"}",
+        "time": "2023-10-01T08:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "For Qatar Airways in economy class, you are allowed 1 bag with a size limit of 60 inches. There is a fee of $25 for this bag.",
+        "time": "2023-10-01T08:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "How do these baggage policies compare?",
+        "time": [
+          "2023-10-01T08:03:30Z",
+          "2023-10-03T19:45:55Z",
+          "2023-12-14T12:20:37Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Airline_Baggage_Policy_10",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that helps users retrieve airline baggage policies including luggage allowance, size limits, and fees.",
+        "time": "2023-09-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you provide me with the baggage policy for Icelandair's economy class? I have clients carrying some specialized gear.",
+        "time": "2023-09-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_baggage_policy",
+              "arguments": "{\"airline_code\": \"FI\", \"travel_class\": \"economy\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-09-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_baggage_policy",
+        "content": "{\"airline_code\": \"FI\", \"travel_class\": \"economy\", \"luggage_allowance\": \"1 bag\", \"size_limit\": \"55 inches\", \"fees\": \"$40\"}",
+        "time": "2023-09-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The baggage policy for Icelandair in economy class allows for 1 bag. The size limit is 55 inches, and the fee is $40.",
+        "time": "2023-09-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If one of my clients has $100 for baggage fees, how many bags can they bring on Icelandair, considering the current fee?",
+        "time": [
+          "2023-09-01T10:04:21Z",
+          "2023-09-05T03:42:56Z",
+          "2023-11-25T09:28:23Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_baggage_policy",
+          "description": "Retrieves the current luggage allowance, size limits, and fees for a specific airline carrier. It returns the luggage policy details including weight and size restrictions and associated fees.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "airline_code": {
+                "type": "string",
+                "description": "The IATA code for the airline carrier, e.g., 'AA' for American Airlines."
+              },
+              "travel_class": {
+                "type": "string",
+                "description": "The travel class for which the baggage policy is retrieved.",
+                "enum": [
+                  "economy",
+                  "premium_economy",
+                  "business",
+                  "first"
+                ],
+                "default": "economy"
+              }
+            },
+            "required": [
+              "airline_code"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "bankapy_example_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, can you tell me the APY for Bank of America's savings accounts in USD?",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_swrt",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"BofA\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_swrt",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"BofA\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Savings Account\", \"apy\": 0.01}, {\"product_name\": \"High Yield Savings Account\", \"apy\": 0.05}]}",
+        "time": "2023-03-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bank of America's Savings Account in USD has an APY of 0.01%. Their High Yield Savings Account offers an APY of 0.05%.",
+        "time": "2023-03-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "I want an account with APY of at least 0.06%. So they don't have anything for me?",
+        "time": [
+          "2023-03-01T09:02:25Z",
+          "2023-03-04T10:42:38Z",
+          "2023-05-30T08:38:36Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_1",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-15T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you tell me the APY for Chase Bank's regular savings accounts?",
+        "time": "2023-03-15T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_jk23",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Chase\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_jk23",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Chase\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Regular Savings\", \"apy\": 0.02}, {\"product_name\": \"Premier Savings\", \"apy\": 0.03}]}",
+        "time": "2023-03-15T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chase Bank's Regular Savings account in USD has an APY of 0.02%",
+        "time": "2023-03-15T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What is Chase premier Saving account APY?",
+        "time": [
+          "2023-03-15T10:02:16Z",
+          "2023-03-17T13:16:00Z",
+          "2023-07-09T17:41:33Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_2",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hello, can you give me the APY for Citibank's USD savings accounts?",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_citibank",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Citibank\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_citibank",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Citibank\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Basic Savings\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings\", \"apy\": 0.04}]}",
+        "time": "2023-03-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Citibank offers a Basic Savings account with an APY of 0.02% and a Premium Savings account with an APY of 0.04%.",
+        "time": "2023-03-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I want to earn at least $50 in interest over a year with one of these accounts, how much would I need to deposit initially?",
+        "time": [
+          "2023-03-01T09:03:28Z",
+          "2023-03-06T10:53:33Z",
+          "2023-06-01T00:37:01Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_3",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T12:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hi, could you provide me with the APY for Chase Bank's savings accounts in USD?",
+        "time": "2023-03-01T12:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_chase",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Chase\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T12:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_chase",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Chase\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Savings Account\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings Account\", \"apy\": 0.04}]}",
+        "time": "2023-03-01T12:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chase Bank offers a Savings Account in USD with an APY of 0.02%. Their Premium Savings Account has an APY of 0.04%.",
+        "time": "2023-03-01T12:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "I’m interested in their Premium Savings Account. Can you tell me if the APY is above 0.05%?",
+        "time": [
+          "2023-03-01T12:02:28Z",
+          "2023-03-05T02:20:48Z",
+          "2023-06-23T07:22:04Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you tell me the APY for Wells Fargo savings accounts in USD?",
+        "time": "2023-10-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_wf",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"WF\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_wf",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"WF\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Standard Savings Account\", \"apy\": 0.01}, {\"product_name\": \"High Yield Savings Account\", \"apy\": 0.04}]}",
+        "time": "2023-10-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Wells Fargo offers a Standard Savings Account in USD with an APY of 0.01%, and a High Yield Savings Account with an APY of 0.04%.",
+        "time": "2023-10-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about Citibank?",
+        "time": "2023-10-01T10:02:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_wfrt",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"CB\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-10-01T10:02:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_wfrt",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"CB\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Standard Savings Account\", \"apy\": 0.02}, {\"product_name\": \"High Yield Savings Account\", \"apy\": 0.05}]}",
+        "time": "2023-10-01T10:02:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Citibank's offers a Standard Savings Account in USD with an APY of 0.02%, and a High Yield Savings Account with an APY of 0.05%.",
+        "time": "2023-10-01T10:02:11Z"
+      },
+      {
+        "role": "user",
+        "content": "How does their High Yield Savings Account compare to Citibank's offerings?",
+        "time": [
+          "2023-10-01T10:04:54Z",
+          "2023-10-04T03:16:34Z",
+          "2023-12-11T19:19:42Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_5",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-01-10T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hello, what is the APY for Chase's savings account options in USD?",
+        "time": "2023-01-10T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_r3r4i",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Chase\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-01-10T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_r3r4i",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Chase\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Basic Savings Account\", \"apy\": 0.02}, {\"product_name\": \"Premier Savings Account\", \"apy\": 0.04}]}",
+        "time": "2023-01-10T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chase offers a Basic Savings Account with an APY of 0.02% and a Premier Savings Account with an APY of 0.04%.",
+        "time": "2023-01-10T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I deposit $10,000 in their Premier Savings Account, how much interest would I earn in a year?",
+        "time": [
+          "2023-01-10T10:03:13Z",
+          "2023-01-12T17:30:18Z",
+          "2023-06-06T06:31:56Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_6",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-09-25T14:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the APY for Chase's savings accounts in USD?",
+        "time": "2023-09-25T14:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_chase",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Chase\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-09-25T14:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_chase",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Chase\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Basic Savings Account\", \"apy\": 0.02}, {\"product_name\": \"Premier Savings Account\", \"apy\": 0.03}]}",
+        "time": "2023-09-25T14:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chase's Basic Savings Account in USD has an APY of 0.02%. Their Premier Savings Account offers an APY of 0.03%.",
+        "time": "2023-09-25T14:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Can I earn 100$ yearly If i deposit 10k$ in Chase?",
+        "time": [
+          "2023-09-25T14:02:44Z",
+          "2023-09-29T12:43:17Z",
+          "2023-10-25T14:00:11Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hello, what is the APY for Citibank's savings accounts in USD?",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ctb1",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Citibank\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ctb1",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Citibank\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Regular Savings\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings\", \"apy\": 0.04}]}",
+        "time": "2023-03-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Citibank's Regular Savings account in USD offers an APY of 0.02%, while their Premium Savings account offers an APY of 0.04%.",
+        "time": "2023-03-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about Bofa?",
+        "time": "2023-03-01T09:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ctb2",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"bofa\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ctb2",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"bofa\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Regular Savings\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings\", \"apy\": 0.05}]}",
+        "time": "2023-03-01T09:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bofa's Regular Savings account in USD offers an APY of 0.02%, while their Premium Savings account offers an APY of 0.05%.",
+        "time": "2023-03-01T09:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "So If I want to put some money on them which one yields more according to their APY?",
+        "time": [
+          "2023-03-01T09:02:50Z",
+          "2023-03-03T22:16:47Z",
+          "2023-05-15T18:19:15Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_8",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me the APY for Chase Bank's savings accounts in USD?",
+        "time": "2023-03-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_swrt_1",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"Chase\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_swrt_1",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"Chase\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Basic Savings Account\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings Account\", \"apy\": 0.03}]}",
+        "time": "2023-03-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chase Bank's Basic Savings Account in USD has an APY of 0.02%. Their Premium Savings Account offers an APY of 0.03%.",
+        "time": "2023-03-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about Bofa?",
+        "time": "2023-03-01T10:00:30Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ctb2",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"bofa\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T10:00:35Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ctb2",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"bofa\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Regular Savings\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings\", \"apy\": 0.05}]}",
+        "time": "2023-03-01T10:00:36Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bofa's Regular Savings account in USD offers an APY of 0.02%, while their Premium Savings account offers an APY of 0.05%.",
+        "time": "2023-03-01T10:00:41Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the interest rate for the Basic Savings Account at Chase?",
+        "time": [
+          "2023-03-01T10:04:05Z",
+          "2023-03-03T08:56:10Z",
+          "2023-05-27T11:34:07Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "Published_Bank_Interest_Rate_Checker_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a helpful banking assistant that helps users retrieve the advertised Annual Percentage Yield (APY) for a bank's savings account products.",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Hello, could you please provide the APY for Wells Fargo's savings accounts in USD?",
+        "time": "2023-03-01T09:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_twzq",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"WellsFargo\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_twzq",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"WellsFargo\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Standard Savings Account\", \"apy\": 0.02}, {\"product_name\": \"Platinum Savings Account\", \"apy\": 0.04}]}",
+        "time": "2023-03-01T09:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Wells Fargo offers a Standard Savings Account with an APY of 0.02% and a Platinum Savings Account with an APY of 0.04%.",
+        "time": "2023-03-01T09:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What about Bofa?",
+        "time": "2023-03-01T09:01:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_ctb2",
+            "function": {
+              "name": "retrieve_bank_apy",
+              "arguments": "{\"bank_id\": \"bofa\", \"currency\": \"USD\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-01T09:01:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_ctb2",
+        "name": "retrieve_bank_apy",
+        "content": "{\"bank_id\": \"bofa\", \"currency\": \"USD\", \"products\": [{\"product_name\": \"Regular Savings\", \"apy\": 0.02}, {\"product_name\": \"Premium Savings\", \"apy\": 0.05}]}",
+        "time": "2023-03-01T09:01:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bofa's Regular Savings account in USD offers an APY of 0.02%, while their Premium Savings account offers an APY of 0.05%.",
+        "time": "2023-03-01T09:01:26Z"
+      },
+      {
+        "role": "user",
+        "content": "How do these APYs compare with Wells Fargo's offerings?",
+        "time": [
+          "2023-03-01T09:03:14Z",
+          "2023-03-04T17:01:57Z",
+          "2023-03-31T09:01:26Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "retrieve_bank_apy",
+          "description": "Fetches the advertised Annual Percentage Yield (APY) for a bank's savings account products. It returns the list of product names and their corresponding APY values.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "bank_id": {
+                "type": "string",
+                "description": "The unique identifier for the bank whose APY is being requested."
+              },
+              "currency": {
+                "type": "string",
+                "description": "The currency for which the APY is requested, e.g., 'USD'.",
+                "default": "USD"
+              }
+            },
+            "required": [
+              "bank_id"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "astronomical_object_info_4",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a knowledgeable assistant that helps users retrieve information about celestial bodies like planets, stars, and galaxies.",
+        "time": "2023-03-14T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current distance from Earth to Mars?",
+        "time": "2023-03-14T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_astronomical_object_info",
+              "arguments": "{\"name\": \"Mars\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-14T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_astronomical_object_info",
+        "content": "{\"name\": \"Mars\", \"type\": \"Planet\", \"distance_from_earth_km\": 75500000, \"mass_kg\": 6.4171e23, \"radius_km\": 3389.5, \"orbital_period_days\": 687}",
+        "time": "2023-03-14T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Currently, Mars is about 75,500,000 kilometers away from Earth. If you need any other details, feel free to ask!",
+        "time": "2023-03-14T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Could you tell me how long it would take light to travel from Mars to Earth based on the distance from Earth to Mars?",
+        "time": [
+          "2023-03-14T10:02:50Z",
+          "2023-03-16T07:30:29Z",
+          "2023-08-08T10:46:28Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_astronomical_object_info",
+          "description": "Retrieve static data and properties about celestial bodies like planets, stars, and galaxies.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "astronomical_object_info_7",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a knowledgeable assistant that helps users retrieve information about celestial bodies like planets, stars, and galaxies.",
+        "time": "2023-03-15T09:30:00Z"
+      },
+      {
+        "role": "user",
+        "content": "Which galaxies are the largest in the Local Group? Could you provide a list with their size information?",
+        "time": "2023-03-15T09:30:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_astronomical_object_info",
+              "arguments": "{\"name\": \"Local Group, largest galaxies\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-03-15T09:30:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_astronomical_object_info",
+        "content": "[{\"name\": \"Andromeda Galaxy\", \"type\": \"Galaxy\", \"diameter_kly\": 220, \"mass_solar_masses\": 1.230e12}, {\"name\": \"Milky Way\", \"type\": \"Galaxy\", \"diameter_kly\": 105, \"mass_solar_masses\": 8.5e11}, {\"name\": \"Triangulum Galaxy\", \"type\": \"Galaxy\", \"diameter_kly\": 60, \"mass_solar_masses\": 5.0e10}]",
+        "time": "2023-03-15T09:30:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the largest galaxies in the Local Group, along with their sizes:\n\n- Andromeda Galaxy: Diameter ~220,000 light-years\n- Milky Way: Diameter ~105,000 light-years\n- Triangulum Galaxy: Diameter ~60,000 light-years",
+        "time": "2023-03-15T09:30:11Z"
+      },
+      {
+        "role": "user",
+        "content": "What is the current estimated mass of the Andromeda Galaxy?",
+        "time": [
+          "2023-03-15T09:34:14Z",
+          "2023-03-16T09:30:11Z",
+          "2023-05-08T07:44:37Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_astronomical_object_info",
+          "description": "Retrieve static data and properties about celestial bodies like planets, stars, and galaxies.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "astronomical_object_info_9",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a knowledgeable assistant that helps users retrieve information about celestial bodies like planets, stars, and galaxies.",
+        "time": "2023-04-01T09:00:15Z"
+      },
+      {
+        "role": "user",
+        "content": "What are some details about the planet Jupiter?",
+        "time": "2023-04-01T09:00:15Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_astronomical_object_info",
+              "arguments": "{\"name\": \"Jupiter\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-04-01T09:00:20Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_astronomical_object_info",
+        "content": "{\"name\": \"Jupiter\", \"type\": \"Planet\", \"distance_au\": 5.2, \"mass_earth_masses\": 317.8, \"radius_earth_radii\": 11.2, \"atmosphere\": \"Hydrogen, Helium\", \"moons\": 79}",
+        "time": "2023-04-01T09:00:21Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Jupiter is a gas giant planet located about 5.2 astronomical units from the Sun. It has a mass about 317.8 times that of Earth and a radius approximately 11.2 times larger. Its atmosphere is primarily composed of hydrogen and helium, and it has 79 known moons.",
+        "time": "2023-04-01T09:00:26Z"
+      },
+      {
+        "role": "user",
+        "content": "Now can you tell me about Saturn?",
+        "time": "2023-04-01T09:01:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0002",
+            "function": {
+              "name": "get_astronomical_object_info",
+              "arguments": "{\"name\": \"Saturn\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-04-01T09:01:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0002",
+        "name": "get_astronomical_object_info",
+        "content": "{\"name\": \"Saturn\", \"type\": \"Planet\", \"distance_au\": 9.58, \"mass_earth_masses\": 95.2, \"radius_earth_radii\": 9.45, \"atmosphere\": \"Hydrogen, Helium\", \"moons\": 83}",
+        "time": "2023-04-01T09:01:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Saturn is another gas giant, orbiting about 9.58 astronomical units from the Sun. It has a mass approximately 95.2 times that of Earth and a radius about 9.45 times Earth's. Like Jupiter, its atmosphere is mostly hydrogen and helium. Saturn is known for its spectacular ring system and has 83 recognized moons.",
+        "time": "2023-04-01T09:01:11Z"
+      },
+      {
+        "role": "user",
+        "content": "Between Jupiter and Saturn, which planet has more known moons?",
+        "time": [
+          "2023-04-01T09:06:24Z",
+          "2023-04-04T03:51:50Z",
+          "2023-08-25T01:58:57Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_astronomical_object_info",
+          "description": "Retrieve static data and properties about celestial bodies like planets, stars, and galaxies.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "astronomical_object_info_29",
+    "history": [
+      {
+        "role": "system",
+        "content": "You are a knowledgeable assistant that helps users retrieve information about celestial bodies like planets, stars, and galaxies.",
+        "time": "2023-04-01T10:00:00Z"
+      },
+      {
+        "role": "user",
+        "content": "What's the current distance from Earth to Mars?",
+        "time": "2023-04-01T10:00:00Z"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_0001",
+            "function": {
+              "name": "get_astronomical_object_info",
+              "arguments": "{\"name\": \"Mars\"}"
+            },
+            "type": "function"
+          }
+        ],
+        "time": "2023-04-01T10:00:05Z"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_0001",
+        "name": "get_astronomical_object_info",
+        "content": "{\"name\": \"Mars\", \"type\": \"Planet\", \"distance_from_earth_km\": 78900000, \"mass_kg\": 6.39e23, \"radius_km\": 3389.5, \"orbital_period_days\": 687}",
+        "time": "2023-04-01T10:00:06Z"
+      },
+      {
+        "role": "assistant",
+        "content": "The current distance from Earth to Mars is approximately 78,900,000 kilometers.",
+        "time": "2023-04-01T10:00:11Z"
+      },
+      {
+        "role": "user",
+        "content": "If I launched a probe from Earth traveling at 30,000 km/h toward Mars, how long would it take to get there?",
+        "time": [
+          "2023-04-01T10:02:02Z",
+          "2023-04-05T10:12:57Z",
+          "2023-06-11T14:50:03Z"
+        ]
+      }
+    ],
+    "function": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_astronomical_object_info",
+          "description": "Retrieve static data and properties about celestial bodies like planets, stars, and galaxies.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        }
+      }
+    ]
+  }
+]
