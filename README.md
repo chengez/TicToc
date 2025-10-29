@@ -1,7 +1,7 @@
 # Temporal Misalignment of LLM Tool Calls
 
 This is a preliminary work under development, and is the code repo for the preprint [Temporal Blindness in Multi-Turn LLM Agents:
-Misaligned Tool Use vs. Human Time Perception]().
+Misaligned Tool Use vs. Human Time Perception](https://arxiv.org/abs/2510.23853).
 
 We are working on expanding the dataset with more scenarios and trajectories, collecting human preferences from a larger population, and balancing the number of samples for ***preferTool*** and ***preferNoTool*** cases. Stay tuned for our updates!
 
